@@ -1,0 +1,30 @@
+<archetype-descriptor name="spring-boot-maven-archetype">
+  <fileSets>
+    <fileSet filtered="false" encoding="UTF-8">
+      <directory/>
+      <includes>
+        <include>src/main/resources/**</include>
+        <include>.run/**</include>
+        <include>.gitignore</include>
+        <include>docker-compose.yml</include>
+        <include>LICENSE</include>
+        <include>lombok.config</include>
+        <include>Makefile</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory/>
+      <includes>
+        <include>src/main/java/**</include>
+        <include>.env</include>
+        <include>Dockerfile</include>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <requiredProperties>
+    <requiredProperty key="package">
+      <defaultValue>${groupId}.${artifactId.replace('-','.')}</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+</archetype-descriptor>
